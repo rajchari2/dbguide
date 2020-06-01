@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'dbguide.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'guidedb',
+        'USER': 'dbguide_user',
+        'PASSWORD': 'User_2020',
+        'HOST': 'fr-s-mysql-4.ncifcrf.gov',
+        'PORT': '3306',
     }
 }
 
@@ -109,7 +113,7 @@ STATICFILES_DIRS = [                # For static files not particular to any app
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
